@@ -9,7 +9,12 @@ def index():
 
 @app.route("/home")
 def home():
-    return render_template("home.html")
+    connect = sqlite3.connect('database.db')
+    cursor = connect.cursor()
+    cursor.execute("SELECT name FROM CHARACTERS")
+    data = cursor.fetchall()
+    print(data)
+    return render_template("home.html", data = data)
 
 db = sqlite3.connect('database.db')
 db.execute('CREATE TABLE IF NOT EXISTS CHARACTERS (name TEXT, level TEXT, hp TEXT, hp_tot TEXT, rm TEXT)')
@@ -42,7 +47,6 @@ def characters(name):
     data = cursor.fetchall()
     if not data:
         data = [('0','0','0','0','0')]
-    print(data)
     return render_template("sheet.html",name = name, character = data)
 
 if __name__ == "__main__":

@@ -52,6 +52,10 @@ h3 {
   width: 65%;
 }
 
+.char {
+  color: #6666FF;
+}
+
 #title {
   font-size: 40px;
   font-weight: bold;

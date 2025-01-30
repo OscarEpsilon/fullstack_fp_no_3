@@ -8,5 +8,11 @@
    <h3>About</h3>
 <p class="about">This page is designed more as a personal tool than as a service. I intended to create something that I would actually use in the future, and I'm pretty happy with the result. I can go in to modify the available attributes to better reflect specific systems, and the database is stored right in the directory with the server, making it easily saveable and shareable. The whole github project includes the python venv required to run it, so it should for the most part work as a package with very little tweaking.</p>
 </div>
+<div class=section>
+  <h3>Characters</h3>
+  {%for char in data%}
+  <a class=char href="{{ url_for('characters', name = char[0])}}">{{char[0]}}</a>
+  {%endfor%}
+</div>
 
 {% endblock %}
