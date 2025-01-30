@@ -1,8 +1,12 @@
 {% extends 'index.html'%}
 
 {% block body %}
-
-<p>hello this is the home page</p>
-<a href="{{ url_for('login')}}">Login</a>
+<div class=create>
+  <a id = "portal" href="{{ url_for('login')}}">Create or view a character</a>
+</div>
+<div class=section>
+   <h3>About</h3>
+<p class="about">This page is designed more as a personal tool than as a service. I intended to create something that I would actually use in the future, and I'm pretty happy with the result. I can go in to modify the available attributes to better reflect specific systems, and the database is stored right in the directory with the server, making it easily saveable and shareable. The whole github project includes the python venv required to run it, so it should for the most part work as a package with very little tweaking.</p>
+</div>
 
 {% endblock %}

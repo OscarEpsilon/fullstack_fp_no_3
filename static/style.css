@@ -1,0 +1,70 @@
+body {
+  background-color: #1d1d1d;
+  font-family: "cambria", serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+input {
+  background-color: #666666;
+  color: #dddddd;
+  font-weight: bold;
+}
+
+.value {
+  width: 30px;
+}
+
+h3 {
+  margin: 0px;
+  text-align: left;
+}
+
+.about {
+  text-align: left;
+  line-height: 20px;
+}
+
+.create {
+  background-color: #111111;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+  border: 3px outset #dddddd
+}
+
+.section {
+  background-color:#333333;
+  border: 3px outset #555555;
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 65%;
+}
+
+#title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration-line: none;
+  text-shadow: 5px 5px black;
+}
+
+#portal {
+  color:#ff5555;
+}
+
+#charname {
+  font-size: 25px;
+  font-weight: bold;
+}

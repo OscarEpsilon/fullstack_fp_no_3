@@ -3,8 +3,18 @@
 {% block body %}
 
 <form method="POST">
-  <p>{{name}}</p>
-  <input type="hp" name="hp" value={{character[0][1]}}>
-
+  <p id="charname">{{name}}</p>
+  <label>Level</label>
+  <input class="value" type="level" name="level" value={{character[0][1]}}>
+  <br/>
+  <label>HP</label>
+  <input class="value" type="hp" name="hp" value={{character[0][2]}}>
+  <label> / </label>
+  <input class="value" type="hp_tot" name="hp_tot" value={{character[0][3]}}>
+  <br/>
+  <label>Roll Modifier</label>
+  <input class="value" type="rm" name="rm" value={{character[0][4]}}>
+  <br/>
+  <input type = "submit" value = "Save"/>
 
 {% endblock %}
