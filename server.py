@@ -25,7 +25,7 @@ def login():
 @app.route("/characters/<name>", methods=['POST', 'GET'])
 def characters(name):
     if request.method == 'POST':
-        hp = request.form['hp']
+        hp = request.form['hp'].replace(' ', '')
         with sqlite3.connect("database.db") as users:
             cursor = users.cursor()
             if cursor.execute("SELECT * FROM CHARACTERS WHERE name=\'" + name + "\'").fetchall():
@@ -39,6 +39,7 @@ def characters(name):
     data = cursor.fetchall()
     if not data:
         data = [('0','0')]
+    print(data)
     return render_template("sheet.html",name = name, character = data)
 
 if __name__ == "__main__":
